@@ -31,11 +31,16 @@ def format_data(text):
   return result 
   
 def main():
+  print("program running...")
   parser = argparse.ArgumentParser()
   parser.add_argument("-o", "--output", help="Output Directory")
   args = parser.parse_args()
   
   output_dir = args.output
+  
+  if not output_dir:
+    print("Required flag -o or --output for output directory")
+    return
   
   if not os.path.exists(output_dir):
     os.makedirs(output_dir)
@@ -44,7 +49,7 @@ def main():
   html = fetch_data(url)
   data = format_data(html)
   
-  new_file = output_dir + "/cron_" + datetime.now().strftime("%m%d%Y_%H.%M")
+  new_file = output_dir + "/cron_" + datetime.now().strftime("%m%d%Y_%H.%M") + '.csv'
 
   with open(new_file, 'w', newline='') as outfile:
     writer = csv.writer(outfile)
@@ -54,6 +59,7 @@ def main():
       writer.writerow(row.values())
   
     outfile.close()
+  print("program completed")
 
 if __name__ == "__main__":
   main()
