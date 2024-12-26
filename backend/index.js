@@ -32,12 +32,12 @@ app.use((err, req, res, next) => {
 app.use("/v1/users", userRouter);
 app.use("/v1/notes", authenticateToken, notesRouter);
 
-app.use(function(_, res){
+app.use(function(req, res){
   res.status(404);
   res.json(failedResponse('not found'))
 });
 
-app.use(function(err, _, res, _){
+app.use(function(err, req, res, next){
   res.status(err.status || 500);
   res.json(failedResponse(err.message));
 });
