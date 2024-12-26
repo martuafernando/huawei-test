@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start-backend:dev": "nodemon ./backend/index.js",
+    "start-frontend:dev": "vite ./frontend",
     "start-backend": "node ./backend/index.js",
-    "dev": "vite ./frontend",
-    "build": "vite build",
-    "preview": "vite preview",
-    "format": "eslint ./frontend/**/*.jsx --fix"
+    "build-frontend": "vite build ./frontend",
+    "start-frontend": "vite preview ./frontend",
+    "format-frontend": "eslint ./frontend/**/*.jsx --fix"
   },
   "author": "",
   "license": "ISC",
