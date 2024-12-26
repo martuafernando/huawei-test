@@ -45,9 +45,9 @@ npm run start-backend
 
 ### Frontend
 
-To run backend application, you can follow these steps:
+To run frontend application, you can follow these steps:
 
-1. Clone the repository
+1. Clone the repository (skip if you clone it before)
 
 ```bash
 git clone https://github.com/martuafernando/huawei-test.git
@@ -74,7 +74,9 @@ npm run start-frontend
 
 ### Automation Script
 
-1. Clone the repository
+To set up the automation for data collection (via cron job), follow these steps:
+
+1. Clone the repository (skip if you clone it before)
 
 ```bash
 git clone https://github.com/martuafernando/huawei-test.git
