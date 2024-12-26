@@ -37,7 +37,7 @@ npm install
 cp .env.example .env
 ```
 
-4. Run the development server
+1. Run the server
 
 ```bash
 npm run start-backend
@@ -47,14 +47,14 @@ npm run start-backend
 
 To run frontend application, you can follow these steps:
 
-1. Clone the repository (skip if you clone it before)
+1. Clone the repository (skip if you have cloned it before)
 
 ```bash
 git clone https://github.com/martuafernando/huawei-test.git
 cd huawei-test
 ```
 
-2. Install dependencies
+2. Install dependencies (skip if you have intalled it before)
 
 ```bash
 npm install
@@ -76,7 +76,7 @@ npm run start-frontend
 
 To set up the automation for data collection (via cron job), follow these steps:
 
-1. Clone the repository (skip if you clone it before)
+1. Clone the repository (skip if you have cloned it before)
 
 ```bash
 git clone https://github.com/martuafernando/huawei-test.git
